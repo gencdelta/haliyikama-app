@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halı Yıkama - Müşteri Listesi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .back-button {
+            position: absolute;
+            left: 16px;
+            color: white;
+        }
+        .search-bar {
+            padding: 16px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 24px;
+            font-size: 16px;
+            box-sizing: border-box;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        .search-input i {
+            margin-right: 8px;
+            color: #666;
+        }
+        .search-input input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        .customer-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .customer-item {
+            padding: 16px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .customer-item:hover {
+            background-color: #f9f9f9;
+        }
+        .customer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-right: 16px;
+        }
+        .customer-info {
+            flex: 1;
+        }
+        .customer-name {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .customer-phone {
+            font-size: 14px;
+            color: #666;
+        }
+        .fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 100;
+        }
+        .fab:hover {
+            background-color: #1976D2;
+        }
+        /* Material Icons */
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="material-icons back-button">arrow_back</i>
+            Müşteriler
+        </div>
+        
+        <div class="search-bar">
+            <div class="search-input">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Müşteri ara...">
+            </div>
+        </div>
+        
+        <ul class="customer-list">
+            <li class="customer-item">
+                <div class="customer-avatar">AY</div>
+                <div class="customer-info">
+                    <div class="customer-name">Ahmet Yılmaz</div>
+                    <div class="customer-phone">0532 123 4567</div>
+                </div>
+            </li>
+            <li class="customer-item">
+                <div class="customer-avatar">MK</div>
+                <div class="customer-info">
+                    <div class="customer-name">Mehmet Kaya</div>
+                    <div class="customer-phone">0533 765 4321</div>
+                </div>
+            </li>
+            <li class="customer-item">
+                <div class="customer-avatar">FD</div>
+                <div class="customer-info">
+                    <div class="customer-name">Fatma Demir</div>
+                    <div class="customer-phone">0535 987 6543</div>
+                </div>
+            </li>
+            <li class="customer-item">
+                <div class="customer-avatar">AÇ</div>
+                <div class="customer-info">
+                    <div class="customer-name">Ayşe Çelik</div>
+                    <div class="customer-phone">0536 456 7890</div>
+                </div>
+            </li>
+            <li class="customer-item">
+                <div class="customer-avatar">HT</div>
+                <div class="customer-info">
+                    <div class="customer-name">Hasan Taş</div>
+                    <div class="customer-phone">0537 234 5678</div>
+                </div>
+            </li>
+        </ul>
+        
+        <div class="fab">
+            <i class="material-icons">add</i>
+        </div>
+    </div>
+</body>
+</html>

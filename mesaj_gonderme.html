@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halı Yıkama - Mesaj Gönderme</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .header .back-button {
+            position: absolute;
+            left: 16px;
+            color: white;
+        }
+        .customer-selector {
+            padding: 16px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+        .customer-selector i {
+            margin-right: 8px;
+            color: #666;
+        }
+        .customer-selector select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+        }
+        .message-templates {
+            padding: 16px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+        .template-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .template-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .template-button {
+            padding: 8px 12px;
+            background-color: #e0e0e0;
+            border-radius: 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .template-button:hover {
+            background-color: #d0d0d0;
+        }
+        .message-area {
+            flex: 1;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+        .message-input-container {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+        .message-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 24px;
+            font-size: 16px;
+            resize: none;
+        }
+        .send-button {
+            margin-left: 8px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2196F3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .send-button:hover {
+            background-color: #1976D2;
+        }
+        .message-preview {
+            padding: 16px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        .preview-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        .preview-content {
+            font-size: 16px;
+            color: #333;
+        }
+        /* Material Icons */
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <i class="material-icons back-button">arrow_back</i>
+            Mesaj Gönder
+        </div>
+        
+        <div class="customer-selector">
+            <i class="material-icons">person</i>
+            <select>
+                <option>Tüm Müşteriler</option>
+                <option>Ahmet Yılmaz - 0532 123 4567</option>
+                <option>Mehmet Kaya - 0533 765 4321</option>
+                <option>Fatma Demir - 0535 987 6543</option>
+                <option>Ayşe Çelik - 0536 456 7890</option>
+                <option>Hasan Taş - 0537 234 5678</option>
+            </select>
+        </div>
+        
+        <div class="message-templates">
+            <div class="template-label">Hazır Şablonlar</div>
+            <div class="template-buttons">
+                <div class="template-button">Sipariş Hazır</div>
+                <div class="template-button">Teslimat Bilgisi</div>
+                <div class="template-button">Ödeme Hatırlatma</div>
+                <div class="template-button">Kampanya Duyurusu</div>
+            </div>
+        </div>
+        
+        <div class="message-area">
+            <div class="message-preview">
+                <div class="preview-title">Mesaj Önizleme:</div>
+                <div class="preview-content">
+                    Sayın müşterimiz, halı yıkama siparişiniz hazırdır. Bugün saat 17:00'a kadar teslim edilecektir. İyi günler dileriz. - ABC Halı Yıkama
+                </div>
+            </div>
+            
+            <div class="message-input-container">
+                <textarea class="message-input" rows="2" placeholder="Mesajınızı yazın...">Sayın müşterimiz, halı yıkama siparişiniz hazırdır. Bugün saat 17:00'a kadar teslim edilecektir. İyi günler dileriz. - ABC Halı Yıkama</textarea>
+                <div class="send-button">
+                    <i class="material-icons">send</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

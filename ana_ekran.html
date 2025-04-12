@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halı Yıkama - Ana Ekran</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: white;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #2196F3;
+            color: white;
+            padding: 16px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding: 16px;
+        }
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .menu-item i {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: #2196F3;
+        }
+        .menu-item span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .footer {
+            background-color: #f5f5f5;
+            padding: 16px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 480px;
+        }
+        /* Material Icons */
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Halı Yıkama Yönetim
+        </div>
+        
+        <div class="menu">
+            <div class="menu-item">
+                <i class="material-icons">people</i>
+                <span>Müşteriler</span>
+            </div>
+            <div class="menu-item">
+                <i class="material-icons">assignment</i>
+                <span>Siparişler</span>
+            </div>
+            <div class="menu-item">
+                <i class="material-icons">add_circle</i>
+                <span>Yeni Sipariş</span>
+            </div>
+            <div class="menu-item">
+                <i class="material-icons">message</i>
+                <span>Mesajlar</span>
+            </div>
+            <div class="menu-item">
+                <i class="material-icons">today</i>
+                <span>Takvim</span>
+            </div>
+            <div class="menu-item">
+                <i class="material-icons">settings</i>
+                <span>Ayarlar</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Halı Yıkama İşletme Yönetim Uygulaması v1.0
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header {
+    background-color: #2196F3;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+.menu-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.menu-item i {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #2196F3;
+}
+.menu-item span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.footer {
+    background-color: #f5f5f5;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Müşteri listesi ekranı */
+.search-bar {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.search-input i {
+    margin-right: 8px;
+    color: #666;
+}
+.search-input input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+.customer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.customer-item {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.customer-item:hover {
+    background-color: #f9f9f9;
+}
+.customer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-right: 16px;
+}
+.customer-info {
+    flex: 1;
+}
+.customer-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.customer-phone {
+    font-size: 14px;
+    color: #666;
+}
+.fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 100;
+}
+.fab:hover {
+    background-color: #1976D2;
+}
+
+/* Form elemanları */
+.form-container {
+    padding: 16px;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    display: block;
+}
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.form-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+}
+.button-primary {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    flex: 1;
+}
+.button-primary:hover {
+    background-color: #1976D2;
+}
+.button-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    margin-right: 16px;
+}
+.button-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Genel yardımcı sınıflar */
+.back-button {
+    position: absolute;
+    left: 16px;
+    color: white;
+}
+.section-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 24px 0 16px 0;
+    color: #333;
+}
+
+/* Responsive tasarım */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Material Icons */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
